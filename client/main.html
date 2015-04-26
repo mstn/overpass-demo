@@ -1,0 +1,41 @@
+<head>
+  <title>overpass-demo</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>
+        Overpass Demo
+        <small>simple demo using <a href="https://github.com/mstn/overpass">mstn:overpass</a> package</small>
+      </h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        {{> map}}
+      </div>
+      <div class="col-md-6">
+        {{> stats}}
+      </div>
+    </div>
+  </div>
+</body>
+
+<template name="map">
+  <div id="map"></div>
+</template>
+
+<template name="stats">
+  Bbox: {{bbox}} <br/>
+  Loaded items: {{count}} <br>
+
+  <table class="table">
+    {{#each latest}}
+    <tr>
+      <td>{{id}}</td>
+      <td>{{updatedAt}}</td>
+      <td>{{properties.tags.name}}</td>
+    </tr>
+    {{/each}}
+  </table>
+</template>
