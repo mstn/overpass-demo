@@ -8,4 +8,4 @@ Run application
      $ cd overpass-demo
      $ meteor
 
-Or see [online demo](http://overpass.meteor.com);
+Note: this meteor app is intended only as a demo. If you want to use it, remember to remove insecure package.
